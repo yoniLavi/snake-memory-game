@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory game</title>
+    <link rel="stylesheet" href="memorygame.css">
+</head>
+<body onload="initializeBoard('boardSvg')">
+    <h1 id="message">Want to play?</h1>
+    <div id="controls">
+        <button onclick="startNewGame(this)">Start new game</button>
+    </div>
+    <div id="boardcontainer">
+        <svg id="boardSvg" height="600" width="600" data-phase='GAME_OVER'></svg>
+    </div>
+    <script src="sound.js"></script>
+    <script src="memorygame.js"></script>
+</body>
+</html>

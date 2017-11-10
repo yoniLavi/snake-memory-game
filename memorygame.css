@@ -1,0 +1,70 @@
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#controls button {
+    width: 440px;
+    font-size: 1.5em;
+    margin: auto;
+}
+
+#controls, #boardcontainer {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+svg[data-phase='PLAYER_TURN'] {
+    cursor: pointer;
+}
+
+svg[data-phase='COMPUTER_TURN'] {
+    cursor: no-drop;
+}
+
+svg circle {
+    stroke: black;
+    fill: lightgrey;
+}
+
+svg circle.active {
+    fill: orange;
+    animation: burnAway 1.2s;
+}
+
+svg circle.origin {
+    stroke-width: 3;
+}
+
+svg[data-phase='GO_TO_ORIGIN'] circle.origin {
+    fill: green;
+    stroke-width: 3;
+}
+
+svg line {
+    stroke: orange;
+    stroke-width: 1;
+    animation: burnAway 1.2s;
+}
+
+@keyframes burnAway {
+    0% {
+        stroke: white;
+        fill: white;
+    }
+    50% {
+        stroke: red;
+        fill: red;
+    }
+    100% {
+        stroke: orange;
+        fill: orange;
+    }
+}
+
+#message {
+    background: lightblue;
+    text-align: center;
+}
